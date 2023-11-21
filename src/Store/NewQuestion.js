@@ -1,7 +1,8 @@
 import {create} from "zustand";
 import confetti from "canvas-confetti";
 import {preguntas} from "../Database/Pregubtas";
-export const NewQuestion = create((set,get)=>{
+import { persist } from "zustand/middleware";
+export const NewQuestion = create(persist((set,get)=>{
     return {
         preguntas: [],
         currentpreguntas:0,
@@ -39,6 +40,8 @@ export const NewQuestion = create((set,get)=>{
         reset:()=>{
             set({currentpreguntas:0,preguntas:[]});
         }
-    }
-});
+    }},
+    {
+    name:'preguntas'
+    }));
 

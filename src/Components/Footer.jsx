@@ -4,7 +4,7 @@ import { NewQuestion } from "../Store/NewQuestion";
 export const Footer = ()=>{ 
     const {correct,incorrect,unanswer} = Usequestion();
     const reset = NewQuestion((state)=>state.reset);
-
+    console.log(incorrect);
     return (
         <footer style={{marginTop:'16px',display:'flex',flexDirection:'column'}}>
             <strong>

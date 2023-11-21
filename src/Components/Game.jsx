@@ -47,7 +47,7 @@ const Question = ({info})=>{
                     disabled={info.userSelectAnswer != null}
                      onClick={HandleQuestion(index)}
                      sx={{background:getBackgroundColor(index)}}>
-                      <ListItemText primary={answer} sx={{textAlign:'center'}}/>
+                    <ListItemText primary={answer} sx={{textAlign:'center'}}/>
                     </ListItemButton>
                    </ListItem>
           })}
